@@ -1,0 +1,656 @@
+* {
+    font-family: 'poppins', sans-serif;
+}
+
+body #login_body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.container-login {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+}
+
+.img-login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.img-login img {
+    width: 500px;
+}
+
+.form_login {
+    width: 360px;
+}
+
+.login-content img {
+    height: 100px;
+}
+
+.login-content h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.login-content h3 {
+    margin-top: 15px;
+    color: #333;
+    font-size: 2.3rem;
+}
+
+.login-content .input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #2aa77d;
+}
+
+.login-content .input-div.one {
+    margin-top: 0;
+}
+
+.i_login {
+    color: #088bc7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i_login i {
+    transition: .3s;
+}
+
+.input-div>div {
+    position: relative;
+    height: 45px;
+}
+
+.input-div>div>h5 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.input-div:before,
+.input-div:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #38d39f;
+    transition: .4s;
+}
+
+.input-div:before {
+    right: 50%;
+}
+
+.input-div:after {
+    left: 50%;
+}
+
+.input-div.focus:before,
+.input-div.focus:after {
+    width: 50%;
+}
+
+.input-div.focus>div>h5 {
+    top: -5px;
+    font-size: 15px;
+}
+
+.input-div>.i_login>i:focus {
+    color: #38d39f;
+}
+
+.input-div>div>input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+    font-family: 'poppins', sans-serif;
+}
+
+.input-div.pass {
+    margin-bottom: 4px;
+}
+
+a.forgot_pwd {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+a.forgot_pwd:hover {
+    color: #38d39f;
+}
+
+a.sign_up {
+    text-decoration: none;
+    color: #999;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+a.sign_up:hover {
+    color: #38d39f;
+}
+
+.btn_login {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn_login:hover {
+    background-position: right;
+}
+
+p.create_account {
+    margin: 2rem 0;
+    color: #999;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1050px) {
+    .container-login {
+        grid-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .form_login {
+        width: 290px;
+    }
+    .login-content h2 {
+        font-size: 1.9rem;
+        margin-bottom: 23px;
+    }
+    .login-content h3 {
+        margin-top: 8px;
+        font-size: 1.7rem;
+    }
+    .img-login img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container-login {
+        grid-template-columns: 1fr;
+    }
+    .img-login {
+        display: none;
+    }
+    .wave {
+        display: none;
+    }
+    .login-content {
+        justify-content: center;
+    }
+}
+
+.err {
+    font-weight: 500;
+    color: rgb(168, 61, 61);
+    padding: 5px;
+    border-radius: 5px
+}
+
+.errs {
+    font-weight: 500;
+    color: green;
+    padding: 5px;
+    border-radius: 5px
+}
+
+
+/*  End */
+
+
+/* File index cua sin vien */
+
+.index_sinhvien_information {
+    margin-top: 20px;
+    width: 85%;
+    margin-left: 5%;
+}
+
+.logout {
+    float: right;
+}
+.logout:hover{
+    color: #0080FF;
+}
+
+.hethonghocsinh {
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #3498db;
+}
+
+.framedivsv {
+    background-color: #258daf;
+    padding: 0;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    justify-content: center;
+    text-align: center;
+    transition: ease-in 0.3s;
+}
+
+.framedivsv:hover {
+    background-color: #71b3c9;
+    box-shadow: 5px 5px 2px 2px #dddcdc;
+}
+
+.rowsindexsv div {
+    justify-content: center;
+    padding: 0 2px 0 2px;
+}
+
+.anhthongbbao1 {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 80%;
+    border-radius: 10px 10px 0 0;
+}
+
+.link {
+    color: white;
+    height: 20%;
+    font-weight: 600;
+    font-size: 25px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+
+/* File thoong baos */
+
+.buttonback {
+    font-size: 40px;
+    color: #1B9CFC;
+}
+
+.buttonback:hover {
+    font-size: 40px;
+    color: #ff3838;
+}
+
+.word {
+    font-size: 30px;
+    color: #7158e2;
+    font-weight: 600;
+}
+
+hr {
+    height: 2px;
+    background-color: #4b4b4b;
+}
+
+.score td {
+    padding: 10px;
+    border-bottom: 1px solid #7d5fff;
+    text-align: center;
+}
+
+.classscore {
+    text-align: center;
+}
+
+.score th {
+    padding: 10px;
+    border-bottom: 2px solid #7d5fff;
+    border-right: 2px solid #7d5fff;
+}
+
+.class9 {
+    border-right: none;
+}
+
+
+/* information student */
+
+.inforstudent {
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    margin-top: 15px;
+}
+
+.inforstudent p {
+    padding-top: 7px;
+}
+
+.inforstudent span {
+    font-weight: 600;
+    color: #3d3d3d;
+}
+
+.imageavatarusername {
+    width: 180px;
+    height: 210px;
+    border: 1px solid black;
+}
+
+.imageuser {
+    max-height: 100%;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+
+/* Thoi khoa bieu */
+
+.thoikhoabieusinhvien {}
+
+.tablethoikhoabieu {
+    justify-content: center;
+    text-align: center;
+}
+
+.tablethoikhoabieu td {
+    padding-bottom: 9px;
+}
+
+.tablethoikhoabieu th {
+    padding-bottom: 9px;
+    color: white;
+    background-color: #44c5e6;
+    border: 1px solid white;
+}
+
+.tablethoikhoabieu td:hover {
+    background-color: #c0e6f0;
+}
+
+
+/* Thoi khoa bieu gv*/
+
+.tablethoikhoabieugv {
+    justify-content: center;
+    text-align: center;
+}
+
+.tablethoikhoabieugv th {
+    color: white;
+    background-color: #44c5e6;
+    border: 1px solid white;
+}
+
+.tablethoikhoabieugv td:hover {
+    background-color: #c0e6f0;
+}
+
+
+/* Doi pass word sinhvien */
+
+.formchangepass div {
+    margin-bottom: 20px;
+    color: #3ae374;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.formchangepass div input {
+    border: none;
+    border-bottom: 1px solid #4b4b4b;
+}
+
+.formchangepass div input:hover {
+    outline: none;
+    background-color: #98bad4;
+}
+
+.formchangepass div input:focus {
+    outline: none;
+    border-bottom: 1px solid #26ae58;
+}
+
+.formchangepass {
+    justify-content: center;
+}
+
+.thediv span {
+    width: 30%;
+}
+
+.thediv input {
+    width: 70%;
+}
+
+.btnchangepass input {
+    width: 100px;
+    border: none;
+    outline: none;
+    background-color: #077a8e;
+    border-radius: 10px;
+    color: white;
+}
+
+.btnchangepass input:hover {
+    width: 100px;
+    border: none;
+    outline: none;
+    background-color: #198fa4;
+    border-radius: 10px;
+    color: white;
+}
+
+
+/* Danh sach sinh vien */
+
+.liststd td {
+    padding: 10px;
+    border-bottom: 1px solid #7d5fff;
+    text-align: center;
+}
+
+.liststd th {
+    padding: 10px;
+    border-bottom: 2px solid #7d5fff;
+}
+
+
+/* taop noi dung thong bao */
+
+.btncreatentf {
+    width: 100px;
+}
+
+.btncreatentf:hover {
+    outline: none;
+    background-color: #c0c1c4;
+}
+
+
+/* Update infor */
+
+.updateinfor div {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.tableupdate td {
+    padding-bottom: 20px;
+}
+
+.tableupdate th {
+    padding-bottom: 20px;
+}
+
+.tableupdate input {
+    padding: 5px;
+    width: 100%;
+}
+
+
+/* delete account */
+
+.deleteacc {
+    font-size: 25px;
+}
+
+.deleteacc div {
+    padding-bottom: 30px;
+}
+
+.btndlt {
+    width: auto;
+    padding: 0 10px 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(107, 162, 224);
+    transition: ease-in-out 0.5s;
+    padding: 0 10px 0 10px;
+}
+
+.btndlt:hover {
+    width: auto;
+    padding: 0 10px 0 10px;
+    background-color: red;
+    color: white;
+}
+
+
+/* update infor*/
+
+.btnupdate input {
+    background-color: #2E64FE;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    color: white;
+}
+
+.btnupdate input:hover {
+    background-color: #58ACFA;
+}
+
+
+/* Xu li yeu cau */
+
+.btnxoa {
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.btnok {
+    color: white;
+    background-color: #0080FF;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+
+/* Đánh giá giáo viên */
+
+.danhgiagv {
+    color: white;
+    background-color: #1B9CFC;
+    padding: 2px 10px 2px 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+.danhgiagv:hover {
+    color: white;
+    background-color: #4fa5e7;
+}
+
+
+/***  */
+
+.btndelete {
+    color: white;
+    background-color: red;
+    padding: 5px;
+    border: none;
+}
+
+
+/* thong bao */
+
+.btnthongbao {
+    padding: 20px;
+    border: none;
+    background-color: #1366e4;
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+.btnthongbao:hover {
+    background-color: #1366e4;
+    box-shadow: 5px 5px 5px 1px #888888;
+}
